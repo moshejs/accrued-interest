@@ -1,0 +1,56 @@
+{
+  "name": "accrued-interest",
+  "version": "1.0.0",
+  "description": "Bond accrued interest between coupon dates — ACT/ACT-ICMA (US Treasuries), 30/360, ACT/360, and more. Zero dependencies, verified against TreasuryDirect's published figures.",
+  "keywords": [
+    "accrued-interest",
+    "accrual",
+    "bonds",
+    "fixed-income",
+    "treasury",
+    "coupon",
+    "day-count",
+    "act-act",
+    "30-360",
+    "finance",
+    "settlement",
+    "interest"
+  ],
+  "homepage": "https://moshemalka.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moshejs/accrued-interest.git"
+  },
+  "bugs": "https://github.com/moshejs/accrued-interest/issues",
+  "author": "Moshe Malka <hello@moshemalka.com> (https://moshemalka.com)",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.0",
+    "vitest": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
