@@ -1,6 +1,6 @@
 {
   "name": "accrued-interest",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Bond accrued interest between coupon dates — ACT/ACT-ICMA (US Treasuries), 30/360, ACT/360, and more. Zero dependencies, verified against TreasuryDirect's published figures.",
   "keywords": [
     "accrued-interest",
